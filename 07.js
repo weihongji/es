@@ -70,7 +70,7 @@ map.set(1, () => {
 
 })
 
-for (const item of map) {
-	console.log(`--${item[0]}--`);
-	item[1]();
+for (const [key, f] of map) {
+	console.log(`--${key}--`);
+	f();
 }
